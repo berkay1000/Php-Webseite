@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+ <link rel="stylesheet" href="../css/bootstrap.css">
+ <link rel="stylesheet" href="../css/bootstrap-grid.css">
+ <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+ <script type="text/javascript" src="../js/bootstrap.bundle.js"></script>
+    <script type="text/javascript"src="../js/bootstrap.js"></script>
+	<link rel="stylesheet" href="../css/style.css">
+	</head>
+	<body bgcolor='#FAFAFA'>
+
+<div class="container-fluid">
+	<div id="navbar_mobile" class=" col-xs-12 d-block d-sm-none text-center" >
+		 <h3 >SQL-Tool</h3><p>
+			<a href="../../index.php">I-SQL</a>
+			<a href="../../Tabellenansehenmobile.php">Daten</a>
+			<a id="active" href="Hilfe.html">Hilfe</a>
+            <a href="SQLBeispiele.php">BSP</a>
+            <a href="ermodell.php">ER-Schema</a></p>
+		</div>
+
+	<div class="row">
+
+
+        <div class="col-sm-6 col-lg-6 col-xl-6 d-none d-sm-block" >
+			
+            <img class="float-left position-absolute d-none d-sm-block img-responsive"  
+			src="../bilder/handOBENLINKS.png"
+            style="z-index: 2" />
+			<h1  id="overheadline" style="margin-left:135px;">SQL-Tool</h1>
+        </div>
+
+
+		
+
+        <div class="col-sm-6 col-lg-6 col-xl-6 text-left d-none d-sm-block float-left  ">
+		
+            <img class="img-responsive float-right" src="../bilder/logoHSO.gif" height="60" width="226"/>
+        </div>
+    </div>	
+	<div class="d-none d-sm-block">
+    <img src="../bilder/line_bottom.png" width="100%"/>
+	</div>
+	 
+	
+    <div class="row-fluid">
+        <div id="navbar_left" class="col-xs-12 col-sm-3 col-xl-2 d-none d-sm-block hidden-xs hidden-xs-inline float-left" >
+          
+			<p ><a href="../../index.php">Interaktives SQL</a></p>
+			<p "><a href="../../Tabellenansehen.php">Datenbestand</a></p>
+			<p id="active"><a href="Hilfe.html">Hilfe</a></p>
+            <p><a href="SQLBeispiele.php">SQL-Beispiele</a></p>
+          
+			<p class=""><a href="../HTML/ermodell.php">ER-Schema</a></p>
+        </div>
+
+	<div id="Hilfebereich" class="col-xs-12 col-sm-7 col-xl-8 float-left">
+
+	<div class="col-md-12 col-lg-12 col-xs-12">
+		<h2 id="pageheadline">Hilfe</h2>
+		Mit dieser Anwendung k&ouml;nnen SQL-Abfragen auf eine bestehende Datenbank
+		getestet werden. Soweit m&ouml;glich findet dabei eine 
+		Syntax&uuml;berpr&uuml;fung statt 
+		und gibt genauere Auskunft &uuml;ber m&ouml;gliche Fehler.
+		Eine Datenbank speichert Daten, auf die wir zugreifen wollen.. im Normalfall sieht der Inhalt wie eine Exceltabelle, nämlich tabellarisch, aus. </br>
+		Unsere Datenbank besteht aus mehrere Tabellen(z.b. Assistent oder Vorlesung) und jeder dieser Tabellen hat nochmal einige Attribute(z.b. name, fachgebiet), die die Tabellen genauer beschreiben.</br>
+		Jede Tabelle hat dann eigene Einträge. Die Einträge innerhalb jeder Tabellen sind dann "realistische" Daten. Im System gibt es zum Beispiel einen Assistenten Ronaldo mit Fachgebiet Bodenturnen.
+		<p> So sieht zum Beispiel die gesamte Assistententabelle aus: </p>
+		
+		<img class="img-thumbnail" src="../bilder/Assistenttabelle.png" >
+		<br/></br/>
+	</div>
+		
+	
+
+		<div class="col-md-12 col-lg-12 col-xs-12"  >
+		<h2>SQLabfrage</h2>
+	
+		<img class="img-thumbnail" src="../bilder/eingabebereich.png" >
+		</div>
+	<div class="col-md-12 col-lg-12">
+	</div>
+		<div class="col-md-12 col-lg-12">
+Hier kann man ganze SQL-Befehle eingeben. Im Normalfall ist ein Befehl in 3 Teile unterteilt:
+<p><b>select</b> Attribute(z.b. personalNr, name oder * )( Welche Attribute willst du sehen? "*" für alle Attribute der Tabelle) Hier muss man aufpassen, dass nicht jede Tabelle jedes Attribut hat. Eine Vorlesung hat keine personalNr. <a href="../../Tabellenansehen.php">hier</a> kann man sich für die Tabellen die Attribute und Einträge ansehen.
+<p><b>from</b>  Tabellen(z.b. Assistent,Professor) (Welche Tabellen sollen dabei berücksichtigt werden)
+<p><b>kondition</b> z.b.(having/groupBy/where) Gibt es irgendwelche Bedingungen? z.b. Nur Zeilen mit der personalNr 3001 sollen angezeigt werden) Konditionen müssen nicht zwingend mitgegeben werden. </br>
+		<p>Anmerkung: 	Will man mehrere Attribute anzeigen oder Tabellen berücksichtigen, dann werden diese mit einem Komma(,) getrennt. (z.b. select <b>name,PersonalNr</b> from....</p>
+		</div>
+		
+		
+		<p>Ein einfacher Befehl könnte zum Beispiel so aussehen </br>
+		<img class="img-thumbnail" src="../bilder/eingabebereich2.png" >
+		<div class="col-md-12 col-lg-12 col-xs-12"  >
+		 
+		 Die Antwort dieser SQL-Abfrage sieht dem zufolge so aus: </br>
+		<img class="img-thumbnail" src="../bilder/ausgabebereich.png" >
+		</div>
+		<div class="col-md-12 col-lg-12 col-xs-12"  >
+		Das ist auch der Befehl, um die gesamte Assistententabelle zu sehen.
+		Wenn wir zum Beispiel nur noch Attribut PersonalNr sehen wollten und name, fachgebiet und boss verschwinden lassen, dann müssten man das "*" durch ein "personalNr" ersetzen. </br>
+		-> weniger Spalten </br>
+		Wenn wir die Einträge reduzieren wollen, dann werden Bedingungen(z.b where) eingebaut. Nur Einträge, die X erfüllen, sollen erscheinen. </br>
+		-> weniger Zeilen/Datensätze </br>
+		
+		Zeig mir <strong> personalNR, name und Fachgebiet </strong>  an von der Tabelle <b>Assistent</b>. Zeig mir nur Zeilen an, die die personalNR= 3001 haben: </br>
+		</div>
+		<div class="col-md-12 col-lg-12 col-xs-12"  >
+	
+		<p><img class="img-thumbnail" src="../bilder/eingabewherepers.png" > </p>
+		</div>
+		
+		 <p><img class="img-thumbnail" src="../bilder/Ausgabebereich1Zeile.png" > </p></br>
+		
+		<div class="col-md-12 col-lg-12">
+		<ul>
+		<li>Weitere Beispielbefehle gibt es  <a href="SQLbeispiele.php">hier</a>.</li>
+		<li>Um alle Inhalte der Tabellen zu sehen, klicke  <a href="../../Tabellenansehen.php">hier</a>.</li>
+		<li>Für die Zusammenhänge der Tabellen <a href="ermodell.php">hier</a></li>
+		
+		</ul>
+		
+		
+		</div>
+		
+		<div class="col-md-12 col-lg-12">
+		<h2>Konditionen</h2>
+		Wie vorher kurz angesprochen, kann man mit Konditionen Bedingungen aufstellen, dass doch bitte nicht alle Einträge erscheinen sollen. Aber "im dritten Teil", bei den Konditionen kann man noch viel mehr anstellen als nur eine Bedingung: Es sind Gruppierungen möglich, gruppenbedingungen. logische Algebra-> also mehrere Bedingungen zusammen oder getrennt wirkend(and/or...). Oder man kann Tabellen verknüpfen:
+		
+		<br/>
+		<h2>Verknüpfung/join</h2>
+		Wenn man sich das <a href="ermodell.php">ER-modell</a> ansieht, dann merkt man, dass die Tabellen nicht alleine vor sich her leben, sondern Relationen, Beziehungen zu anderen Tabellen haben. Aber nicht genau die Tabellen, sondern die einzelnen Einträge haben Beziehungen zu einander. Beim genaueren Hinsehen haben die einzelnen Assistenten einen Fremdschlüssel im Attribut "boss". Das ist eine Referenz zu einem Boss, genauer gesagt zu einem Professor. Im <a href="ermodell.php">ER-modell</a>  ist diese Beziehung durch "arbeitet fuer" gekennzeichnet. dabei entsprechen die zahlen von personalNr der Professoren dem Bossattribut vom Assistent. Assistent<>Professor ist eine N zu 1 Beziehung: 1 Assistent hat einen Professor als Boss. 1 Professor kann mehrere Assistenten haben.
+		<img class="img-thumbnail" src="../bilder/ProfessorAssistentverbindung.png" > <br/>
+		
+		Um eine Verknüpfung(in MySQL "join" genannt) in SQL zu erstellen, baut man einfach eine Bedingung ein, wobei die Referenzattribute gleichgesetzt werden. <br/>
+		Bedingung:"boss ist dasselbe wie personalNr."
+		
+		<p><img class="img-thumbnail" src="../bilder/EingabebereichVerknuepfung.png" ></p>
+		   </div>
+		   
+<div class="col-md-12 col-lg-12">
+<h3>Ausgabebereich</h3>
+<p> <img class="img-thumbnail" src="../bilder/AssistentProfessorgemeinsameTabelle.png" > </p>
+ Wie man sieht, wurden die Einträge zusammengebunden. Professoren (und auch Assistenten) ohne Verbindungen fallen standardmäßig raus. Diese Verknüpfung kann man logisch erweitern. Verknüpfe diese Tabellen <b>UND</b>
+ relevant sind nur diese Einträge, in der der Professor Meier heißt. <a href="HilfeNojoin.html" > was passiert, wenn ich nicht richtig verknüpfe oder es vergesse? </a>
+ </div>
+ 
+<div class="col-md-12 col-lg-12">
+		<p> <img class="img-thumbnail" src="../bilder/EingabebereichVerknuepfungBedingung.png" > </p>
+		
+		
+		Die zweite Bedingung streicht somit alle nicht-Professor Meier Einträge raus. und weil nur der Assistenten.name und fachgebiet ausgegeben werden, bleiben somit nur noch diese 4 Felder übrig
+		<p> <img class="img-thumbnail" src="../bilder/AssistentProfessornurMeier.png" > </p>
+		<!--<a href="artenvonjoin.html">Weitere speziellere Arten von Join[Work in Progress]</a>-->
+		
+		
+		
+		<h2>Gruppierungen</h2>
+		Gruppierungen in SQL sind nichts anderes, als eine Gruppe Einträge abhängig ihrer Merkmale zusammen zu fassen. Dabei verringert sich die Anzahl Einträge erheblich.
+		in SQl sieht ein Befehl so aus:
+		<b>Group by</b> <i>attribut(,attributnr2..)</i> wobei attribut und attribut2 dafür stehen, nach welchem Attribut zusammengefasst werden soll. Nur dann wenn alle Attribute gleich sind, zählt diese als eine Gruppe. Vielleicht hilft eine kleine Anekdote besser, um Gruppierungen zu verstehen: In einer Sporthalle sind 100 Kinder(Einträge) zu sehen. Manche sind Mädels, manche sind Jungs. Manche schwarzhaarig, manche blond. Wir wollen die Kinder in Gruppen zusammenbringen und das nicht willkürlich sondern wir nutzen Attribute, um sie zu unterteilen. Wir gruppieren nach Geschlecht, oder wir gruppieren nach Haarfarbe, group by Gender. Mit diesen einzelnen Gruppen könnte man mehr anfangen. Man könnte die Schüler der einzelnen Gruppen zählen(Count(*)). Wie viele Schwarzhaarige haben wir?  Man könnte die Körpergröße aller einzelnen Gruppen zusammenzählen. Wie groß sind die schwarzhaarigen zusammen(sum(körpergröße))? Zurück zu unseren Tabellen: Wir wollen die Vorlesung-Tabelle gruppieren.     <br/><br/>
+		 <span>Zuerst wird zur Verdeutlichung die ganze Vorlesung-Tabelle gezeigt, bevor gruppiert wird  </span>
+		<p> <img class="img-thumbnail" src="../bilder/grpone.png" > </p>
+		
+		<span> ...erzeugt diese Ausgabe. Die roten Rechtecke wurden abhängig von gelesenVon gezeichnet. </span>
+		<p> <img class="img-thumbnail" src="../bilder/grptwo.png" > </p>
+		Wir wollen nun nach gelesenVon/Professor gruppieren. Statt irgendwie nach Haarfarbe oder Geschlecht sortieren wir unsere Kinder(einzelnen Vorlesungen) nach den einzelnen Professoren.  
+		Nun könnte es heißen, dass man gerne hätte, wie viele Vorlesungen( count(*)),und insgesamte Anzahl SWS( sum(SWS)) jeder Professor(gelesenVon) hat.
+		Man beachte beim Bild oben auf die Anzahl der Einträge innerhalb der Rechtecke und die Summierung der SWS, wie sie sich bei einer gelesenVon-Gruppierung beim Bild unten entwickeln.
+		<p> <img class="img-thumbnail" src="../bilder/grpthree.png" > </p>
+		
+		<p> <img class="img-thumbnail" src="../bilder/grpfour.png" > </p>
+		
+		Konditionen bezogen auf die Gruppe sind auch möglich. der obere Befehl wird durch ein "having SummeSWS >4" ergänzt. Professoren unter 4 SummeSWS werden entfernt. In der Geschichte: Der Sportlehrer schaut sich die Gruppen an und lässt die Gruppen rausschmeißen, die die having-Bedingung nicht erfüllen. z.b. zu kleine Gruppen(unter 10 Leuten) werden rausgeschmissen(having count(*)>10)  .
+		<p> <img class="img-thumbnail" src="../bilder/grpfive.png" > </p>
+		
+		<p> <img class="img-thumbnail" src="../bilder/grpsix.png" > </p>
+		</div>
+		
+		
+		<!--oder anderes zeug wie like, '%irgendwasdazwischen%'-->
+		
+		
+		
+		
+		
+	
+	
+	
+
+</div>
+</div>
+
+</body>
+</html>

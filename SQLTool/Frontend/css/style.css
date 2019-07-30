@@ -1,0 +1,139 @@
+
+
+#navbar_left {
+	background-color: #efefef;
+	border-color: #ffffff;
+	border: 4px;
+    color: #1E3287;
+    color: rgb(30,50,135);
+    font-family: arial;
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: none;
+    text-underline: none;
+    line-height: normal;
+	
+	
+	padding-top: 55px;
+	padding-left: 15px;
+	
+	 min-height: 100vh;
+    
+}
+#navbar_oben {
+    padding-left: 30px;
+    color: #1E3287;
+    color: rgb(30,50,135);
+    font-family: arial;
+    font-size: 10pt;
+    font-weight: bold;
+    text-decoration: none;
+    text-underline: none;
+    line-height: normal;
+    margin-right: 7px;
+	
+	
+
+
+}
+#navbar_mobile{
+	padding:5px;
+	text-align:center;
+	float:none;
+	background-color:#efefef;
+}
+
+#unterstrichen{
+	text-decoration:none;
+	border-bottom: 1px dotted black;
+	text-size: 15px;
+}
+
+#Eingabebereich{
+	background-color: #ffffff;
+	text-color: #yellow;
+	padding-bottom:10px;
+	
+	
+
+
+	
+}
+#einUndAusgabeBereich{
+
+}
+
+#Ausgabebereich{
+	background-color: #efefef;
+	
+
+}
+#Ausgabebereichmobil{
+	
+	background-color: #efefef;
+}
+#fehlerausgabe{
+	
+	background-color:#efefef;
+	text-align:left;
+	
+
+}
+#AusgabebereichUeberschrift{
+	background-color:#efefef;
+	text-align:center;
+	min-height:400px;
+	
+}
+
+
+
+.bordertable{
+	
+	border: 1px solid grey;
+	
+	text-align: center;
+}
+table { margin:auto; }
+
+#SQLBeispieleAnzahlGerade{
+	 background-color:#dadada;
+	 padding: 15px;
+}
+
+#SQLBeispieleAnzahlUngerade{
+	background-color:#efefef;
+	padding: 15px;
+}
+#SQL-Beispiele{
+	padding-left:25px;
+	background-color:#efefef;
+}
+#mobiletable{
+	margin: 0px auto;
+}
+#active{
+background-color:#cccccc;
+
+
+}
+#pageheadline{
+color: #9B9187;
+font-family: arial;
+font-weight: bolder;
+font-size: 22pt;
+margin-left:22px;
+text-align:center;
+}
+#overheadline{
+color: #9B9187;
+font-family: arial;
+font-weight: bolder;
+font-size: 22pt;
+}
+
+
+a:hover{
+background-color:#cccccc;
+}
+

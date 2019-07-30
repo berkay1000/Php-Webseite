@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+ <link rel="stylesheet" href="../css/bootstrap.css">
+ <link rel="stylesheet" href="../css/bootstrap-grid.css">
+ <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+ <script type="text/javascript" src="Frontend/js/bootstrap.bundle.js"></script>
+    <script type="text/javascript"src="Frontend/js/bootstrap.js"></script>
+	</head>
+<body>
+Was passiert, wenn ich per SQL 2 Tabellen abfrage und vergesse, diese irgendwie miteinander zu verknüpfen?
+Das erste was du dir höchstwahrscheinlich denkst: "Och hab ich viele Daten bekommen". Aber diese Daten sind falsch.
+Das System wird erstmal versuchen, jeden Professor mit jeden Assistenten miteinander zu verbinden, ohne darauf zu achten, ob das Sinn ergibt. Visualisiert sieht das chaotisch aus, genauso auch die Anzahl der Einträge.
+
+
+<img class="img-thumbnail" src="../bilder/ProfessorAssistentohneVerbindung.png" > <br/>
+
+Wenn man dann dieses Chaos aufräumen will, macht man einen Join(AttributA = AttributB). Nun fallen alle Einträge weg, die diese Bedingung nicht mehr erfüllen.(klinsmann hat bossnr 2125, ist verbunden mit Professor Müller, PersonalNr 2126. 
+<p>2125 = 2126  ist falsch, dieser Eintrag verschwindet.</p>
+klinsmann hat bossnr 2125, ist vebrunden mit Professor Meier, personalNr 2125
+<p> 2125 = 2125 ist richtig, dieser Eintrag bleibt </p>
+
+<img class="img-thumbnail" src="../bilder/ProfessorAssistentVerbindung.png" >
+
+</body>
